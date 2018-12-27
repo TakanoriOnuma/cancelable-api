@@ -1,1 +1,4 @@
-console.log('hey!');
+import API from './API';
+
+console.log(API);
+API.fetch();
