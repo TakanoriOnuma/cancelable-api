@@ -1,14 +1,13 @@
-import CancelableAPI from '../../lib/CancelableAPI';
-import lib from '../../lib-dist/index';
+// ビルド前のモジュール
+// import CancelableAPI from '../../lib/CancelableAPI';
+// ビルド後のモジュール
+import CancelableAPI from '../../lib-dist/index';
 
-console.log(lib);
-CancelableAPI.GET;
-
-class API extends lib {
+class API extends CancelableAPI {
   fetch() {
     console.log('request');
     return this.request({
-      method: lib.GET,
+      method: CancelableAPI.GET,
       endpoint: '/data'
     });
   }
