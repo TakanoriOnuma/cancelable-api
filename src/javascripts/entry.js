@@ -23,15 +23,12 @@ import BaseAPI from './BaseAPI';
     promiseList.push(statusObj);
     promise
       .then(() => { statusObj.status = 'success'; })
-      .catch(({ isCancel }) => { statusObj.status = isCancel ? 'cancel' : 'error'; });
-
-    updateStatus();
-    promise
-      .then(() => {})
-      .catch(() => {})
+      .catch(({ isCancel }) => { statusObj.status = isCancel ? 'cancel' : 'error'; })
       .finally(() => {
         updateStatus();
       });
+
+    updateStatus();
   });
 
   const cancelButtonElement = document.getElementById('button-cancel-all-1');
@@ -61,15 +58,12 @@ import BaseAPI from './BaseAPI';
     promiseList.push(statusObj);
     promise
       .then(() => { statusObj.status = 'success'; })
-      .catch(({ isCancel }) => { statusObj.status = isCancel ? 'cancel' : 'error'; });
-
-    updateStatus();
-    promise
-      .then(() => {})
-      .catch(() => {})
+      .catch(({ isCancel }) => { statusObj.status = isCancel ? 'cancel' : 'error'; })
       .finally(() => {
         updateStatus();
       });
+
+    updateStatus();
   });
 
   const cancelButtonElement = document.getElementById('button-cancel-all-2');
