@@ -15,11 +15,13 @@ module.exports = {
         enforce: 'pre',
         test: /\.(js)$/,
         loader: 'eslint-loader',
-        exclude: /node_modules/
+        // lib-distもlintの対象外にする
+        exclude: /(node_modules|lib-dist)/
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        // lib-distもlintの対象外にする
+        exclude: /(node_modules|lib-dist)/,
         loader: 'babel-loader'
       },
       {

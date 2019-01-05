@@ -2,10 +2,11 @@
   "name": "cancelable-api",
   "version": "1.0.0",
   "description": "cancelable api",
-  "main": "index.js",
+  "main": "lib-dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.development.js",
     "build": "webpack --config webpack.config.production.js",
+    "lib-build": "webpack --config webpack.config.lib.js",
     "mock": "nodemon mock/server.js"
   },
   "author": "TakanoriOnuma <ohnhistory@gmail.com>",
