@@ -1,7 +1,7 @@
 // ビルド前のモジュール
-import CancelableAPI from '../../lib/CancelableAPI';
+// import CancelableAPI from '../../lib/CancelableAPI';
 // ビルド後のモジュール
-// import CancelableAPI from '../../lib-dist/index';
+import CancelableAPI from '../../lib-dist/bundle.min.js';
 
 class API extends CancelableAPI {
   /**

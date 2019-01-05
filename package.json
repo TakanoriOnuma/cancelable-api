@@ -2,11 +2,13 @@
   "name": "cancelable-api",
   "version": "1.0.0",
   "description": "cancelable api",
-  "main": "lib-dist/index.js",
+  "main": "lib-dist/bundle.min.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.development.js",
     "build": "webpack --config webpack.config.production.js",
-    "lib-build": "webpack --config webpack.config.lib.js",
+    "lib-build": "yarn lib-build:dev && yarn lib-build:prod",
+    "lib-build:dev": "webpack --mode development -o lib-dist/bundle.js --config webpack.config.lib.js",
+    "lib-build:prod": "webpack --mode production -o lib-dist/bundle.min.js --config webpack.config.lib.js",
     "mock": "nodemon mock/server.js"
   },
   "husky": {

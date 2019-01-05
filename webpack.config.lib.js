@@ -1,13 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
   entry: {
-    'index': [path.resolve('./lib/CancelableAPI.js')]
+    'bundle': [path.resolve('./lib/CancelableAPI.js')]
   },
   output: {
-    filename: '[name].js',
-    path: path.resolve('./lib-dist'),
     library: 'CancelableAPI',
     libraryTarget: 'umd'
   },
