@@ -11,7 +11,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lib-build && git add lib-dist/*"
+      "pre-commit": ""
     }
   },
   "author": "TakanoriOnuma <ohnhistory@gmail.com>",
