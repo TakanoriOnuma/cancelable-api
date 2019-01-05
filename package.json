@@ -18,7 +18,8 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
-    "p-cancelable": "^1.0.0"
+    "p-cancelable": "^1.0.0",
+    "url-join": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

@@ -11,10 +11,11 @@ module.exports = {
     library: 'CancelableAPI',
     libraryTarget: 'umd'
   },
-  externals: {
-    axios: 'axios',
-    'p-cancelable': 'p-cancelable'
-  },
+  externals: [
+    'axios',
+    'url-join',
+    'p-cancelable'
+  ],
   module: {
     rules: [
       {
