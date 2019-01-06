@@ -1,11 +1,12 @@
-# キャンセルAPI
-p-cancelableを使って、受け取ったPromiseでcancelもできるようにしたAPIモジュール。
+# キャンセル可能API
+promiseは普通thenとcatchでresolveやrejectしたものしか受け取れないが、p-cancelableを使うとcancelメソッドが追加される。  
+これを使って、promise.cancel()を実行した時に通信をキャンセルすることができるキャンセル可能なAPIクラスを作成した。  
 
 ## インストール
 `$ yarn add TakanoriOnuma/cancelable-api`
 
 ## 使い方
-CancelableAPIを継承して通信APIを定義します。
+CancelableAPIを継承して通信APIを定義する。
 
 ```js:API.js
 // API.js
@@ -49,7 +50,7 @@ class API extends CancelableAPI {
 export default new API('http://localhost:8080');
 ```
 
-後はAPIインスタンス経由で通信を呼びます。
+後はAPIインスタンス経由で通信を呼ぶ。
 
 ```js
 import API from 'API.js';
@@ -74,7 +75,7 @@ window.setTimeout(() => {
 }, 1000);
 ```
 
-まとめてキャンセルする場合は`.cancelAll`を使用します。
+まとめてキャンセルする場合は`.cancelAll`を使用する。
 
 ```js
 // APIインスタンスでリクエスト中の通信を全てキャンセルする
@@ -85,7 +86,7 @@ CancelableAPI.cancelAll();
 ```
 
 ## サンプル
-cancelable-apiを使ったサンプルはこのリポジトリで`yarn start`するか、以下のリポジトリを参照してください。
+cancelable-apiを使ったサンプルはこのリポジトリで`yarn start`するか、以下のリポジトリを参照すること。
 
 + [Vue.jsでcancelable-apiを使ったサンプルリポジトリ](https://github.com/TakanoriOnuma/use-cancelable-api)
 
