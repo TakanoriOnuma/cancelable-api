@@ -85,8 +85,20 @@ API.cancelAll();
 CancelableAPI.cancelAll();
 ```
 
+## ローカルで動作確認
+このリポジトリでサンプルコードを動かすには以下の手順を踏む。  
+
+まずパッケージをインストールする。  
+`$ yarn install`  
+
+次にフロントエンドの開発サーバーとモックサーバーを立ち上げる。  
+`$ yarn start`  
+`$ yarn mock`  
+
+[http://localhost:10000](http://localhost:10000)にアクセスして動作を確認する。
+
 ## サンプル
-cancelable-apiを使ったサンプルはこのリポジトリで`yarn start`するか、以下のリポジトリを参照すること。
+以下のリポジトリでもこのパッケージを使ったサンプルコードがあるので適宜参照すること。
 
 + [Vue.jsでcancelable-apiを使ったサンプルリポジトリ](https://github.com/TakanoriOnuma/use-cancelable-api)
 
